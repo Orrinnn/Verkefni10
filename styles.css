@@ -1,0 +1,87 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+    --accent: 41, 128, 185; /* Adjusted to a more blue color */
+    --accent-light: 173, 216, 230; /* Light blue color */
+    --accent-dark: 1, 50, 67; /* Dark blue color */
+    --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        rgb(var(--accent-light)) 30%,
+        white 60%
+    );
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font stack */
+    background: #1f2833; /* Darker background color */
+    background-size: 224px;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace; /* Updated font stack for code */
+}
+
+main {
+    margin: auto;
+    padding: 2rem; /* Increased padding for better spacing */
+    width: 800px;
+    max-width: 100%; /* Full width on smaller screens */
+    color: #ffffff; /* White text color */
+    font-size: 18px; /* Slightly reduced font size for better readability */
+    line-height: 1.6;
+}
+
+.weather-box {
+    margin: 2rem auto; /* Increased margin for better spacing */
+    width: 100%; /* Full width */
+    text-align: center;
+    position: relative;
+    border: 2px solid rgb(var(--accent-light)); /* Dark blue border */
+    background: linear-gradient(rgba(var(--accent-dark), 80%), rgba(var(--accent-dark), 40%)); /* Adjusted background gradient */
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex; /* Use flexbox for better layout control */
+    flex-direction: column; /* Stack temperature and humidity vertically */
+    align-items: center; /* Center items horizontally */
+    background-clip: padding-box; /* Add the standard property for compatibility */
+}
+
+.temperature,
+.humidity {
+    margin-top: 1rem; /* Add some space between temperature and humidity */
+    color: #ffffff; /* White text color */
+}
+
+.temperature {
+    order: 1; /* Set the order to control the layout order */
+}
+
+.humidity {
+    order: 2; /* Set the order to control the layout order */
+}
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 2rem; /* Increased margin for better spacing */
+}
+
+h1 {
+    font-size: 3.5rem; /* Slightly reduced heading size for better aesthetics */
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+    color: rgb(var(--accent)); /* Blue heading color */
+}
+
+.text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+}
